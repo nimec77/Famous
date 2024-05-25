@@ -1,5 +1,6 @@
 package ru.comrade77.features.login.models
 
-class LoginAction {
-    
+sealed class LoginAction {
+    data object OpenMainScreen: LoginAction()
 }
+

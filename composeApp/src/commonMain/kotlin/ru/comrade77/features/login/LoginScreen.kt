@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.viewmodel.compose.viewModel
+import ru.comrade77.features.login.models.LoginAction
 import ru.comrade77.navigation.LocalNavHost
 
 @Composable
@@ -16,5 +17,12 @@ fun LoginScreen(
 
     LoginView(viewState = viewState) { event ->
         loginViewModel.obtainEvent(event)
+    }
+
+    when(viewAction) {
+        LoginAction.OpenMainScreen -> {
+            loginViewModel.clearAction()
+        }
+        null -> {}
     }
 }
