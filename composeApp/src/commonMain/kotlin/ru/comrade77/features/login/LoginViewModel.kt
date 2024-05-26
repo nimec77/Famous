@@ -7,7 +7,10 @@ import ru.comrade77.features.login.models.LoginViewState
 
 class LoginViewModel: BaseViewModel<LoginViewState, LoginAction, LoginEvent>(initialState = LoginViewState()) {
     override fun obtainEvent(viewEvent: LoginEvent) {
-        TODO("Not yet implemented")
+        when(viewEvent) {
+            is LoginEvent.EmailChanged -> viewState = viewState.copy(emailValue = viewEvent.newValue)
+            is LoginEvent.PasswordChanged -> viewState = viewState.copy(passwordValue = viewEvent.newValue)
+        }
     }
 
 }

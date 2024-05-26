@@ -1,2 +1,10 @@
 <resources>
+    <string name = "login_titile">Login</string>
+    <string name = "login_wellcome_back">Wellcome back!</string>
+    <string name = "login_intro">Log in to your account and start watching you favorite YouTubers.</string>
+    <string name = "login_email">Email</string>
+    <string name = "login_password">Password</string>
+    <string name = "login_forgot">Forgot password</string>
+    <string name = "login_login">Login</string>
+    <string name = "login_register">Don\'t have an account? Sign up</string>
 </resources>
