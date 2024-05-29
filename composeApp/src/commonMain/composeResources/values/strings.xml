@@ -6,5 +6,6 @@
     <string name = "login_password">Password</string>
     <string name = "login_forgot">Forgot password</string>
     <string name = "login_login">Login</string>
-    <string name = "login_register">Don\'t have an account? Sign up</string>
+    <string name = "login_register">Don't have an account? </string>
+    <string name = "login_singup">Sign up</string>
 </resources>

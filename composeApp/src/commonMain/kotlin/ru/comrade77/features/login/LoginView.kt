@@ -1,6 +1,8 @@
 package ru.comrade77.features.login
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -9,6 +11,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import famous.composeapp.generated.resources.*
 import famous.composeapp.generated.resources.Res
 import famous.composeapp.generated.resources.login_intro
 import famous.composeapp.generated.resources.login_titile
@@ -70,11 +73,65 @@ internal fun LoginView(
             )
         }
 
-        FTextField(text = viewState.emailValue) {
+        FTextField(
+            text = viewState.emailValue,
+            hint = stringResource(Res.string.login_email),
+            enabled = !viewState.isSending,
+        ) {
             eventHandler.invoke(LoginEvent.EmailChanged(it))
         }
-        FTextField(text = viewState.passwordValue) {
+        FTextField(
+            text = viewState.passwordValue,
+            hint = stringResource(Res.string.login_password),
+            enabled = !viewState.isSending,
+        ) {
             eventHandler.invoke(LoginEvent.PasswordChanged(it))
+        }
+
+        Row(
+            modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Box(modifier = Modifier.size(width = 156.dp, height = 40.dp)
+                .clickable { }
+            ) {
+                Text(
+                    modifier = Modifier.align(Alignment.Center),
+                    text = stringResource(Res.string.login_forgot),
+                    color = FamousTheme.colors.primaryText,
+                )
+            }
+
+            Spacer(modifier = Modifier.weight(1f))
+
+            Box(
+                modifier = Modifier.size(width = 84.dp, height = 40.dp)
+                    .clickable { }
+            ) {
+                Text(
+                    modifier = Modifier.align(Alignment.Center),
+                    text = stringResource(Res.string.login_login),
+                    color = FamousTheme.colors.primaryText,
+                )
+            }
+        }
+
+        Row {
+            Text(
+                modifier = Modifier.padding(top = 4.dp, bottom = 12.dp, start = 16.dp),
+                text = stringResource(Res.string.login_register),
+                color = FamousTheme.colors.tintColor,
+                fontWeight = FontWeight.Light
+            )
+
+            Text(
+                modifier = Modifier.padding(top = 4.dp, bottom = 12.dp, end = 16.dp)
+                    .clickable { },
+                text = stringResource(Res.string.login_singup),
+                color = FamousTheme.colors.tintColor,
+                fontWeight = FontWeight.Light
+            )
+
         }
     }
 }
