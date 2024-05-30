@@ -106,7 +106,9 @@ internal fun LoginView(
 
             Box(
                 modifier = Modifier.size(width = 84.dp, height = 40.dp)
-                    .clickable { }
+                    .clickable {
+                        eventHandler.invoke(LoginEvent.LoginClicked)
+                    }
             ) {
                 Text(
                     modifier = Modifier.align(Alignment.Center),
