@@ -1,11 +1,17 @@
 <resources>
-    <string name = "login_titile">Login</string>
-    <string name = "login_wellcome_back">Wellcome back!</string>
-    <string name = "login_intro">Log in to your account and start watching you favorite YouTubers.</string>
-    <string name = "login_email">Email</string>
-    <string name = "login_password">Password</string>
-    <string name = "login_forgot">Forgot password</string>
-    <string name = "login_login">Login</string>
-    <string name = "login_register">Don't have an account? </string>
-    <string name = "login_singup">Sign up</string>
+    <string name="login_titile">Login</string>
+    <string name="login_wellcome_back">Wellcome back!</string>
+    <string name="login_intro">Log in to your account and start watching you favorite YouTubers.</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Password</string>
+    <string name="login_forgot">Forgot password</string>
+    <string name="login_login">Login</string>
+    <string name="login_register">Don't have an account?</string>
+    <string name="login_singup">Sign up</string>
+
+    <string name="bottom_home">Home</string>
+    <string name="bottom_subscriptions">Subscriptions</string>
+    <string name="bottom_post">Post</string>
+    <string name="bottom_inbox">Inbox</string>
+    <string name="bottom_library">Library</string>
 </resources>
