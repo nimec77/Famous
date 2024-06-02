@@ -5,7 +5,7 @@ import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -66,13 +66,13 @@ fun MainScreen() {
                         Icon(
                             imageVector = when (screen) {
                                 MainScreens.Home -> Icons.Filled.Home
-                                MainScreens.Subscriptions -> Icons.Filled.Home
-                                MainScreens.Post -> Icons.Filled.Home
-                                MainScreens.Inbox -> Icons.Filled.Home
-                                MainScreens.Library -> Icons.Filled.Home
+                                MainScreens.Subscriptions -> Icons.Filled.Check
+                                MainScreens.Post -> Icons.Filled.Add
+                                MainScreens.Inbox -> Icons.Filled.MailOutline
+                                MainScreens.Library -> Icons.Filled.AccountBox
                             },
                             contentDescription = screen.route,
-                            tint = FamousTheme.colors.tintColor
+                            tint = if (isSelected) FamousTheme.colors.primaryText else FamousTheme.colors.tintColor
                         )
                     },
                     label = {

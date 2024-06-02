@@ -14,4 +14,6 @@
     <string name="bottom_post">Post</string>
     <string name="bottom_inbox">Inbox</string>
     <string name="bottom_library">Library</string>
+
+    <string name="profile_title">Profile</string>
 </resources>

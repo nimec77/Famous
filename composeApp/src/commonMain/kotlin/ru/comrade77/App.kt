@@ -11,6 +11,7 @@ import androidx.navigation.compose.rememberNavController
 import ru.comrade77.features.create.CreatePost
 import ru.comrade77.features.login.LoginScreen
 import ru.comrade77.features.paywall.PaywallScreen
+import ru.comrade77.features.splash.SplashScreen
 import ru.comrade77.navigation.AppScreens
 import ru.comrade77.navigation.LocalNavHost
 import ru.comrade77.navigation.main.MainScreen
@@ -34,8 +35,13 @@ internal fun FamousApp(
     ) {
         NavHost(
             navController = navController,
-            startDestination = currentScreen
+            startDestination = AppScreens.SplashScreen.title
         ) {
+
+            composable(route = AppScreens.SplashScreen.title) {
+                SplashScreen(navController = navController)
+            }
+
             composable(route = AppScreens.Login.title) {
                 LoginScreen()
             }
