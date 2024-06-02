@@ -25,6 +25,7 @@ import famous.composeapp.generated.resources.bottom_post
 import famous.composeapp.generated.resources.bottom_subscriptions
 import org.jetbrains.compose.resources.stringResource
 import ru.comrade77.features.feed.FeedScreen
+import ru.comrade77.features.profile.ui.ProfileScreen
 import ru.comrade77.navigation.AppScreens
 import ru.comrade77.navigation.LocalNavHost
 import ru.comrade77.theme.FamousTheme
@@ -47,7 +48,7 @@ fun MainScreen() {
             startDestination = MainScreens.Home.route
         ) {
             composable(MainScreens.Home.route) { FeedScreen() }
-            composable(MainScreens.Subscriptions.route) { Text("Hello, Subscriptions") }
+            composable(MainScreens.Subscriptions.route) { ProfileScreen() }
             composable(MainScreens.Inbox.route) { Text("Hello, Inbox") }
             composable(MainScreens.Library.route) { Text("Hello, Library") }
         }

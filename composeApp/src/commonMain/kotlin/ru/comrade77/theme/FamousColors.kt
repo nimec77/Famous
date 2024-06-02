@@ -11,7 +11,7 @@ data class FamousColors (
     val secondaryText: Color,
     val secondaryBackground: Color,
     val tintColor: Color,
-    val deviderColor: Color,
+    val dividerColor: Color,
 )
 
 object FamousTheme {
