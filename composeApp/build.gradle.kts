@@ -11,6 +11,8 @@ plugins {
     alias(libs.plugins.compose)
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlinx.serialization)
+    alias(libs.plugins.room)
+    alias(libs.plugins.ksp)
 }
 
 kotlin {
@@ -71,6 +73,10 @@ kotlin {
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.kotlinx.datetime)
             implementation(libs.multiplatformSettings)
+
+            implementation(libs.room.runtime)
+            implementation(libs.room.sqlite)
+            implementation(libs.room.sqlite.bundle)
 
             implementation(libs.compose.navigation)
             implementation(libs.compose.viewmodel)
@@ -156,6 +162,15 @@ compose.desktop {
     }
 }
 
-compose.experimental {
-    web.application {}
+dependencies {
+    add("kspCommonMainMetadata", libs.room.compiler)
+    add("kspAndroid", libs.room.compiler)
+    add("kspIosX64", libs.room.compiler)
+    add("kspIosArm64", libs.room.compiler)
+    add("kspIosSimulatorArm64", libs.room.compiler)
+    add("kspJvm", libs.room.compiler)
+}
+
+room {
+    schemaDirectory("$projectDir/schemas")
 }
