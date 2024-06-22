@@ -72,6 +72,8 @@ kotlin {
             implementation(libs.ktor.core)
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.kotlinx.datetime)
+            implementation(libs.kotlinx.uuid)
+            
             implementation(libs.multiplatformSettings)
 
             implementation(libs.room.runtime)

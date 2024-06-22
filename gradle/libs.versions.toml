@@ -13,6 +13,7 @@ kotlinx-datetime = "0.6.0"
 multiplatformSettings = "1.1.1"
 compose-viewmodel = "2.8.0"
 compose-navigation = "2.8.0-alpha02"
+kotlin-uuid = "0.0.25"
 
 room = "2.7.0-alpha03"
 sqlite = "2.5.0-alpha03"
@@ -27,6 +28,7 @@ kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-c
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
 kotlinx-coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
+kotlinx-uuid = { module = "app.softwork:kotlinx-uuid-core", version.ref = "kotlin-uuid" }
 
 ktor-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 
