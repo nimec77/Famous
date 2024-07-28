@@ -11,4 +11,3 @@ abstract class AppDatabase: RoomDatabase() {
 }
 
 internal const val dbFileName = "appfamous.db"
-
