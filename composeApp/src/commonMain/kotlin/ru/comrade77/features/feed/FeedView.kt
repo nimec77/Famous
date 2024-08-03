@@ -1,23 +1,18 @@
 package ru.comrade77.features.feed
 
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.material3.Text
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import ru.comrade77.features.feed.models.FeedEvent
+import ru.comrade77.features.feed.models.FeedViewState
+import ru.comrade77.features.feed.presentation.views.FeedCell
 
 @Composable
-fun FeedView() {
-    Text(
-        modifier = Modifier.fillMaxWidth().height(64.dp),
-        textAlign = TextAlign.Center,
-        text = "Home",
-        color = Color.White,
-        fontSize = 36.sp,
-    )
+fun FeedView(viewState: FeedViewState, eventHandler: (FeedEvent) -> Unit) {
+    LazyColumn {
+        items(viewState.feed) {
+            FeedCell(it)
+        }
+    }
 }
 

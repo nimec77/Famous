@@ -36,7 +36,7 @@ enum class MainScreens(val route: String) {
 
 @Composable
 fun MainScreen() {
-    var outerNavController = LocalNavHost.current
+    val outerNavController = LocalNavHost.current
     val navController = rememberNavController()
     val items = MainScreens.entries.toTypedArray()
     val bottomNavigationHeight = 75.dp
